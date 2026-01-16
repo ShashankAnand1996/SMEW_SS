@@ -12,6 +12,12 @@ This repository builds upon the original SMEW model and is licensed under the Cr
 - `Example.ipynb` – Example notebook demonstrating a typical model setup and run  
 - `docs/` – Documentation for model inputs and example usage  
 
+## Documentation
+
+- User-defined input variables: `docs/example_variables.md`
+- Model output variables: `docs/output_variables.md`
+- Internal variables and constants (developer reference): `docs/internal_variables.md`
+
 ## Getting started
 
 1. Clone the repository
