@@ -2,7 +2,7 @@
 
 This document describes the variables that users are expected to define or modify in `Example.ipynb` when running the SMEW_SS model. These variables control the simulation setup, physical assumptions, and process representations.
 
-Internal variables, derived quantities, and plotting-related objects are not documented here.
+Internal variables, output quantities, and plotting-related objects are not documented here.
 
 ---
 
@@ -24,10 +24,10 @@ Soil physical properties and initial soil moisture.
 
 | Variable | Description | Units |
 |--------|-------------|-------|
-| `soil` | Soil texture class (e.g., sand, loam, clay) | – |
+| `soil` | Soil texture class (available options are 'sand', 'loamy sand', 'sandy loam', 'loam', 'clay loam', 'clay') | – |
 | `Zr` | Root zone depth | m |
 | `rho_bulk` | Bulk soil dry mass density | g m⁻³ |
-| `s_in` | Initial relative soil moisture | – |
+| `s_in` | Initial relative soil moisture (fraction of soil pores filled water, with value constrained between 0 and 1) | – |
 
 ---
 
@@ -40,7 +40,7 @@ Soil physical properties and initial soil moisture.
 | `latitude` | Site latitude | radians |
 | `altitude` | Site elevation | m |
 | `albedo` | Surface albedo | – |
-| `coastal` | Coastal correction flag | boolean |
+| `coastal` | Coastal correction flag. `True` if site is a coastal location, `False` if interior location | boolean |
 | `day1` | Initial day of year | day |
 
 ---
@@ -49,10 +49,10 @@ Soil physical properties and initial soil moisture.
 
 | Variable | Description | Units |
 |--------|-------------|-------|
-| `wind` | Wind speed time series | m s⁻¹ |
+| `wind` | Wind speed time series (same length as the time vector `t`) | m s⁻¹ |
 | `temp_av` | Mean annual air temperature | °C |
-| `temp_ampl_yr` | Annual temperature amplitude | °C |
-| `temp_ampl_d` | Daily temperature amplitude | °C |
+| `temp_ampl_yr` | Amplitude of the annual (seasonal) cycle of daily mean air temperature, such that daily mean temperature varies sinusoidally between `temp_av ± temp_ampl_yr` over the year | °C |
+| `temp_ampl_d` | Diurnal air temperature amplitude, defining the daily temperature range, with daily minimum and maximum temperatures given by `daily mean air temperature ± temp_ampl_d/2` | °C |
 
 ---
 
@@ -63,8 +63,8 @@ Rainfall is generated stochastically using the following parameters.
 | Variable | Description | Units |
 |--------|-------------|-------|
 | `R_tot` | Total annual rainfall | m yr⁻¹ |
-| `lamda` | Mean rainfall event frequency | d⁻¹ |
-| `alfa` | Mean rainfall depth per event | m |
+| `lamda` | Mean rainfall event frequency (number of rainy days divided by total number of days) | d⁻¹ |
+| `alfa` | Mean rainfall depth per event (average daily rainfall amount) | m |
 
 ---
 
@@ -74,12 +74,12 @@ Parameters controlling vegetation growth and root properties.
 
 | Variable | Description | Units |
 |--------|-------------|-------|
-| `T_v` | Vegetation growth time scale | days |
+| `T_v` | Vegetation growth time scale, i.e., the time it takes to reach its carrying capacity | days |
 | `k_v` | Vegetation carrying capacity | g m⁻² |
 | `v_in` | Initial vegetation biomass | g m⁻² |
 | `t0_v` | Start day of vegetation growth | day |
 | `RAI` | Root area index | m² m⁻² |
-| `root_d` | Mean root diameter | m |
+| `root_d` | Average root diameter | m |
 
 ---
 
@@ -89,6 +89,7 @@ Variables related to soil organic carbon and respiration partitioning.
 
 | Variable | Description | Units |
 |--------|-------------|-------|
+| `CO2_air_in` | Initial soil CO₂ concentration| mol-conv/l]
 | `SOC_perc` | Soil organic carbon fraction | % |
 | `SOC_in` | Initial SOC concentration | g OC m⁻³ |
 | `ADD` | External litter carbon input | g OC m⁻² d⁻¹ |
@@ -135,8 +136,8 @@ Keywords used to select model formulations and options.
 
 | Variable | Description |
 |--------|-------------|
-| `keyword_wb` | Water balance formulation |
-| `keyword_add` | Background loss handling |
+| `keyword_wb` | Water balance formulation type. Value of 1 selects varying soil moisture dynamics driven by stochastic rainfall. Value of 0 keeps the soil moisture value constant for the simulated days, and computes infiltration/rainfall necessary to balance the evapotranspiration and leakage losses |
+| `keyword_add` | Background loss handling for cations and anions. Value of 1 sets background inputs from rain, litterfall, and background weathering that balances the loss via leakage and passive plant uptake (average over a simulated period). Value of 0 presents the case of no background input |
 | `keyword_ssa` | Specific surface area estimation method |
 
 ---
