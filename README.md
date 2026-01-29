@@ -7,7 +7,7 @@ This repository builds upon the original SMEW model and is licensed under the Cr
 
 ## Repository structure
 
-- `pyEW/` – Core ecohydrological and enhanced weathering model components  
+- `pyEW/` – Core ecohydrological and enhanced weathering model components, with a new python file `biogeochemSS.py` that provides a new numerical solver for incorporating the effects of soil structure and the mixing of added rock powder particles, following https://essopenarchive.org/doi/full/10.22541/essoar.175181451.19659684
 - `pyeto/` – Reference evapotranspiration utilities  
 - `Example.ipynb` – Example notebook demonstrating a typical model setup and run  
 - `docs/` – Documentation for model inputs and example usage  
