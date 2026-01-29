@@ -13,9 +13,6 @@ This repository builds upon the original SMEW model and is licensed under the Cr
   Includes a new Python file `biogeochemSS.py` that provides a numerical solver to incorporate the effects of soil structure and mixing of added rock powder particles, following  
   https://essopenarchive.org/doi/full/10.22541/essoar.175181451.19659684
 
-- `pyeto/`  
-  Reference evapotranspiration utilities  
-
 - `Example.ipynb`  
   Example notebook demonstrating a typical model setup and run
 
