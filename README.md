@@ -20,7 +20,7 @@ This repository builds upon the original SMEW model and is licensed under the Cr
   Example notebook demonstrating a typical model setup and run
 
 - `Example_SS.ipynb`  
-  Example demonstrating model runs with soil pore structure and rock powder mixing for a given particle size distribution (input data is in `Example_/`), using the new solver `biogeochem_balance_SS` described in  
+  Example demonstrating model runs with soil pore structure and rock powder mixing for a given particle size distribution (input data is in `Example_SS_Data/` directory), using the new solver `biogeochem_balance_SS` described in  
   https://essopenarchive.org/doi/full/10.22541/essoar.175181451.19659684
 
 - `docs/`  
