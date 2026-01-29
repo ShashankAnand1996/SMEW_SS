@@ -1,16 +1,30 @@
 # SMEW_SS
 
-SMEW_SS is an extension of the SMEW model for simulating enhanced weathering processes, incorporating the effects of soil structure and the mixing of added rock powder particles.
+SMEW_SS is an extension of the SMEW model for simulating enhanced weathering processes. It incorporates the effects of soil structure and the mixing of added rock powder particles.
 
 ## License
+
 This repository builds upon the original SMEW model and is licensed under the Creative Commons Attribution–NonCommercial 4.0 International License (CC BY-NC 4.0). See `License.txt` for details.
 
 ## Repository structure
 
-- `pyEW/` – Core ecohydrological and enhanced weathering model components, with a new python file `biogeochemSS.py` that provides a new numerical solver for incorporating the effects of soil structure and the mixing of added rock powder particles, following https://essopenarchive.org/doi/full/10.22541/essoar.175181451.19659684
-- `pyeto/` – Reference evapotranspiration utilities  
-- `Example.ipynb` – Example notebook demonstrating a typical model setup and run  
-- `docs/` – Documentation for model inputs and example usage  
+- `pyEW/`  
+  Core ecohydrological and enhanced weathering model components.  
+  Includes a new Python file `biogeochemSS.py` that provides a numerical solver to incorporate the effects of soil structure and mixing of added rock powder particles, following  
+  https://essopenarchive.org/doi/full/10.22541/essoar.175181451.19659684
+
+- `pyeto/`  
+  Reference evapotranspiration utilities  
+
+- `Example.ipynb`  
+  Example notebook demonstrating a typical model setup and run
+
+- `Example_SS/`  
+  Example demonstrating model runs with soil pore structure and rock powder mixing for a given particle size distribution, using the new solver `biogeochem_balance_SS` described in  
+  https://essopenarchive.org/doi/full/10.22541/essoar.175181451.19659684
+
+- `docs/`  
+  Documentation for model inputs and example usage  
 
 ## Documentation
 
@@ -22,5 +36,16 @@ This repository builds upon the original SMEW model and is licensed under the Cr
 
 1. Clone the repository
 2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+
+```bash
+pip install -r requirements.txt
+
+## Contact
+
+Shashank Kumar Anand  
+Email: shashankkumaranand@gmail.com
+
+## Related publication
+
+Anand, S. K., et al. (Year), Title, *Water Resources Research*.  
+https://doi.org/your-doi-here
