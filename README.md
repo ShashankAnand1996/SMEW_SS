@@ -49,4 +49,4 @@ Email: shashankkumaranand@gmail.com
 ## Publication
 
 Anand, S. K., et al. (2025), Soil Structure and Mixing Controls on Water-Rock Contact: Implications for Enhanced Weathering, *Water Resources Research*.  
-[https://essopenarchive.org/doi/full/10.22541/essoar.175181451.19659684]
+https://essopenarchive.org/doi/full/10.22541/essoar.175181451.19659684
