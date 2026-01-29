@@ -39,13 +39,14 @@ This repository builds upon the original SMEW model and is licensed under the Cr
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Contact
 
 Shashank Kumar Anand  
 Email: shashankkumaranand@gmail.com
 
-## Related publication
+## Publication
 
-Anand, S. K., et al. (Year), Title, *Water Resources Research*.  
-https://doi.org/your-doi-here
+Anand, S. K., et al. (2025), Soil Structure and Mixing Controls on Water-Rock Contact: Implications for Enhanced Weathering, *Water Resources Research*.  
+[https://essopenarchive.org/doi/full/10.22541/essoar.175181451.19659684]
