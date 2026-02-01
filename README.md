@@ -10,8 +10,8 @@ This repository builds upon the original SMEW model and is licensed under the Cr
 
 - `pyEW/`  
   Core ecohydrological and enhanced weathering model components.  
-  Includes a new Python file `biogeochemSS.py` that provides a numerical solver to incorporate the effects of soil structure and mixing of added rock powder particles, following  
-  https://essopenarchive.org/doi/full/10.22541/essoar.175181451.19659684
+  Includes a new Python file `biogeochemSS.py` that provides a numerical solver to incorporate the effects of soil structure and mixing of added rock powder particles, following
+  https://doi.org/10.1029/2025WR041479
 
 - `Example.ipynb`  
   Example notebook demonstrating a typical SMEW model setup and run
@@ -40,6 +40,6 @@ Shashank Kumar Anand
 Email: shashankkumaranand@gmail.com
 
 ## Publication
-
-Anand, S. K., et al. (2025), Soil Structure and Mixing Controls on Water-Rock Contact: Implications for Enhanced Weathering, *Water Resources Research*.  
-https://essopenarchive.org/doi/full/10.22541/essoar.175181451.19659684
+ 
+Anand, S. K., Bertagni, M., Aburto, F., & Calabrese, S. (2026). Soil structure and mixing controls on water‐rock contact: Implications for Enhanced weathering. *Water Resources Research*, 62, e2025WR041479.
+https://doi.org/10.1029/2025WR041479
