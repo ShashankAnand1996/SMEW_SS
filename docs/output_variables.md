@@ -5,7 +5,7 @@ This document describes the primary output variables produced by the SMEW_SS mod
 ---
 
 ## 1. Air and soil temperature series
-
+|--------|-------------|-------|
 | `temp_air` | Daily mean air temperature time series | °C |
 | `temp_soil` | Soil temperature time series at depth `Zr` | °C |
 | `temp_min` | Daily minimum air temperature | °C |
@@ -41,13 +41,22 @@ This document describes the primary output variables produced by the SMEW_SS mod
 | Variable | Description | Units |
 |--------|-------------|-------|
 | `SOC` | Soil organic carbon concentration time series | g OC m⁻³ |
-| `r_het` | Heterotrophic respiration flux | mol-conv m⁻² d⁻¹ |
-| `r_aut` | Autotrophic respiration flux | mol-conv m⁻² d⁻¹ |
+| `r_het` | Heterotrophic respiration flux time series | mol-conv m⁻² d⁻¹ |
+| `r_aut` | Autotrophic respiration flux time series | mol-conv m⁻² d⁻¹ |
 | `D` | Soil gas diffusivity time series | m² d⁻¹ |
 
 ---
 
-## 5. Enhanced weathering outputs
+## 5. Soil water alkaline cations
+
+| Variable | Description | Units |
+|--------|-------------|-------|
+| `conc_in` | Array of dissolved cation concentrations in soilpore water, with the same size and ordering as `f_CEC_in` | conv_mol (default = µmol) m⁻³ |
+|`K_CEC`| Array of coefficients, following Gaines-Thomas convention, for cation equilibrium concentrations in soil vs aqueous phase | - |
+
+---
+
+## 6. Enhanced weathering outputs
 
 | Variable | Description | Units |
 |--------|-------------|-------|
