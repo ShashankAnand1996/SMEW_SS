@@ -5,6 +5,8 @@ This document describes the primary output variables produced by the SMEW_SS mod
 ---
 
 ## 1. Air and soil temperature series
+
+| Variable | Description | Units |
 |--------|-------------|-------|
 | `temp_air` | Daily mean air temperature time series | °C |
 | `temp_soil` | Soil temperature time series at depth `Zr` | °C |
