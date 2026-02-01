@@ -1,6 +1,6 @@
 # User-defined variables in `Example.ipynb`
 
-This document describes the variables that users are expected to define or modify in `Example.ipynb` when running the SMEW_SS model. These variables control the simulation setup, physical assumptions, and process representations. Minor differences in model parameters and outputs may arise if functions other than those used in `Example.ipynb` are selected.
+This document describes the variables that users are expected to define or modify in `Example.ipynb` when running the model. These variables control the simulation setup, physical assumptions, and process representations. Minor differences in model parameters and outputs may arise if functions other than those used in `Example.ipynb` are selected.
 
 Internal variables, output quantities, and plotting-related objects are not documented here.
 
