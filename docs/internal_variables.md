@@ -20,23 +20,3 @@ This document describes internal variables, constants, and intermediate quantiti
 | `CO2_atm` | Atmospheric CO₂ concentration|
 
 ---
-
-## 3. Chemical equilibrium constants
-
-| Variable | Description |
-|--------|-------------|
-| `k_H` | Henry's law constant for CO₂ |
-| `k_1` | First dissociation constant of carbonic acid |
-| `k_2` | Second dissociation constant of carbonic acid |
-
----
-
-## 4. Numerical and diagnostic variables
-
-| Variable | Description |
-|--------|-------------|
-| `theta` | Intermediate soil moisture variable |
-| `f_H` | Hydrogen ion fraction used in speciation |
-| `f_Ca` | Calcium fraction on exchange sites |
-
----
