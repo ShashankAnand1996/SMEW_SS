@@ -121,8 +121,7 @@ Initial chemical state of the soil system.
 |--------|-------------|-------|
 | `CaCO3_in` | Initial calcium carbonate content | conv_mol |
 | `MgCO3_in` | Initial magnesium carbonate content | conv_mol |
-| `Si_in` | Initial Si | mol |
-
+| `Si_in` | Initial Si concentration | conv_mol m⁻³ |
 ---
 
 ## 9. Enhanced weathering and rock powder inputs
