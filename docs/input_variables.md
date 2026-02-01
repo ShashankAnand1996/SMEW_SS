@@ -113,15 +113,15 @@ Variables related to soil organic carbon and respiration partitioning.
 ---
 
 
-## 8. Initial solute and carbonate conditions
+## 8. Initial Si and carbonate minerals
 
 Initial chemical state of the soil system.
 
 | Variable | Description | Units |
 |--------|-------------|-------|
-| `CaCO3_in` | Initial calcium carbonate content | mol |
-| `MgCO3_in` | Initial magnesium carbonate content | mol |
-| `Si_in` | Initial dissolved silica | mol |
+| `CaCO3_in` | Initial calcium carbonate content | conv_mol |
+| `MgCO3_in` | Initial magnesium carbonate content | conv_mol |
+| `Si_in` | Initial Si | mol |
 
 ---
 
