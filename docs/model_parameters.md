@@ -1,6 +1,6 @@
 # User-defined variables in `Example.ipynb`
 
-This document describes the variables that users are expected to define or modify in `Example.ipynb` when running the SMEW_SS model. These variables control the simulation setup, physical assumptions, and process representations.
+This document describes the variables that users are expected to define or modify in `Example.ipynb` when running the SMEW_SS model. These variables control the simulation setup, physical assumptions, and process representations. Minor differences in model parameters and outputs may arise if functions other than those used in `Example.ipynb` are selected.
 
 Internal variables, output quantities, and plotting-related objects are not documented here.
 
@@ -20,14 +20,14 @@ These variables define the simulation length and temporal resolution.
 
 ## 2. Soil parameters
 
-Soil physical properties and initial soil moisture.
+Soil physical properties and initial soil moisture value.
 
 | Variable | Description | Units |
 |--------|-------------|-------|
 | `soil` | Soil texture class (available options are 'sand', 'loamy sand', 'sandy loam', 'loam', 'clay loam', 'clay') | – |
 | `Zr` | Root zone depth | m |
 | `rho_bulk` | Bulk soil dry mass density | g m⁻³ |
-| `s_in` | Initial relative soil moisture (fraction of soil pores filled water, with value constrained between 0 and 1) | – |
+| `s_in` | Initial relative soil moisture (fraction of soil pores filled with water, with value constrained between 0 and 1) | – |
 
 ---
 
@@ -97,18 +97,21 @@ Variables related to soil organic carbon and respiration partitioning.
 
 ---
 
-## 7. Enhanced weathering and rock powder inputs
-
-Parameters describing rock powder application and mineral properties.
+## 7. Cation exchange capacity and alkaline cations
 
 | Variable | Description | Units |
 |--------|-------------|-------|
-| `M_rock_in` | Applied rock powder mass | g m⁻² |
-| `rock_f_in` | Mineral fraction vector | – |
-| `SSA_in` | Specific surface area (optional) | m² g⁻¹ |
-| `t_app` | Day of rock application | day |
+| `CEC_tot` | Total cation exchange capacity | conv_mol (default = µmol) m⁻² |
+|`f_Ca_in`| Ca cation exchangeable fraction | - |
+|`f_Mg_in`| Mg cation exchangeable fraction | - |
+|`f_K_in`| K cation exchangeable fraction | - |
+|`f_Na_in`| Na cation exchangeable fraction | - |
+|`f_Al_in`| Al cation exchangeable fraction | - |
+|`f_H_in`| H cation exchangeable fraction | - |
+|`f_CEC_in`| Array of all exchangeable fractions in the soil | - |
 
 ---
+
 
 ## 8. Initial solute and carbonate conditions
 
@@ -122,11 +125,20 @@ Initial chemical state of the soil system.
 
 ---
 
-## 9. Cation exchange capacity
+## 9. Enhanced weathering and rock powder inputs
+
+Parameters describing rock powder application and mineral properties.
 
 | Variable | Description | Units |
 |--------|-------------|-------|
-| `CEC_tot` | Total cation exchange capacity | mol₍c₎ |
+| `M_rock_in` | Applied rock powder mass | g m⁻² |
+| `mineral` | List of mineral phases included in the rock powder | – |
+| `rock_f_in` | Mineral fraction vector | – |
+| `diss_f` | Dissolution factor to account for inhibition/enhancement of EW rates in the soil | - |
+| `d_in` | Array of rock powder diameter distribution bins, a single representative value for an absence of a rock powder distribution | m |
+| `psd_perc_in` | Array of diameter class weights, with the sum of the array equal to 1 | % |
+| `SSA_in` | Specific surface area (use `np.nan` for the model to compute it) | m² g⁻¹ |
+| `t_app` | Day of rock application | day |
 
 ---
 
@@ -145,5 +157,7 @@ Keywords used to select model formulations and options.
 ## Notes
 
 - All variables listed above are defined explicitly in `Example.ipynb`.
+- Concentrations refer to dissolved species in soil porewater unless otherwise stated.
 - Seasonal rainfall options require multi-year simulations.
+- Column-integrated quantities (e.g., CEC, total solute inventories) are expressed per unit ground area (m⁻²).
 - Users are encouraged to modify only user-facing parameters unless they are familiar with the internal model structure.
