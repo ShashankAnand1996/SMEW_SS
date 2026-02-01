@@ -1,6 +1,6 @@
 # Internal variables and constants
 
-This document describes internal variables, constants, and intermediate quantities that are visible in `Example.ipynb` but are not intended to be modified by users during standard model runs. These variables are not intended to be modified by users and changing them may break model consistency.
+This document describes internal variables, constants, and intermediate quantities that are visible in `Example.ipynb`. These variables are not intended to be modified by users and changing them may break model consistency.
 
 ---
 
